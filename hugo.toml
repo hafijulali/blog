@@ -1,0 +1,30 @@
+baseURL = 'https://blog.hafijul.dev/'
+languageCode = 'en-us'
+title = 'Noted'
+theme = 'PaperMod'
+
+[params]
+  homeInfoParams = { Title = "Welcome to My Blog", Content = "Tech, Ideas, Minimalism." }
+  ShowReadingTime = true
+  ShowCodeCopyButtons = true
+  ShowBreadCrumbs = true
+  ShowPostNavLinks = true
+  hideFooter = true
+
+[permalinks]
+  posts = "/:year/:month/:day/:slug/"
+
+[menu]
+[[menu.main]]
+  identifier = "home"
+  name = "Home"
+  url = "/"
+[[menu.main]]
+  identifier = "posts"
+  name = "Post"
+  url = "/posts/"
+[[menu.main]]
+  identifier = "about"
+  name = "About"
+  url = "/about/"
+
