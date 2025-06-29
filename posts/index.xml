@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on Noted</title><link>https://blog.hafijul.dev/posts/</link><description>Recent content in Posts on Noted</description><generator>Hugo -- 0.147.9</generator><language>en-us</language><lastBuildDate>Sun, 29 Jun 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.hafijul.dev/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Hello World</title><link>https://blog.hafijul.dev/2025/06/29/hello-world/</link><pubDate>Sun, 29 Jun 2025 00:00:00 +0000</pubDate><guid>https://blog.hafijul.dev/2025/06/29/hello-world/</guid><description>&lt;h2 id="background">Background&lt;/h2>
+&lt;p>Even though there isn&amp;rsquo;t much content for my first blog post, I thoroughly enjoyed the overall experience setting this up.&lt;/p>
+&lt;h2 id="tech-stack">Tech stack&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://gohugo.io">Hugo&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://pages.github.com">Github Pages&lt;/a>&lt;/li>
+&lt;/ul></description></item></channel></rss>
