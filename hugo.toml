@@ -2,7 +2,7 @@ baseURL = 'https://blog.hafijul.dev/'
 languageCode = 'en-us'
 title = 'Noted'
 theme = 'PaperMod'
-version = '0.0.1'
+version = '0.0.2'
 
 [params]
   homeInfoParams = { Title = "Welcome to My Blog", Content = "Tech, Ideas, Minimalism." }
