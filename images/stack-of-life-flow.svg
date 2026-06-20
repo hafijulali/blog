@@ -1,0 +1,292 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1536" height="840" viewBox="0 0 1536 840" role="img" aria-labelledby="title desc">
+  <title id="title">Stack of Life: Hardware to Cloud</title>
+  <desc id="desc">A polished dark system-map diagram showing a technical journey from hardware and electronics through networking, Linux, Kubernetes, platform engineering, Go services, and cloud architecture.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#06182a"/>
+      <stop offset="0.52" stop-color="#030916"/>
+      <stop offset="1" stop-color="#070b16"/>
+    </linearGradient>
+    <radialGradient id="radialA" cx="31%" cy="27%" r="65%">
+      <stop offset="0" stop-color="#133c65" stop-opacity=".58"/>
+      <stop offset=".5" stop-color="#08223d" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#020612" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="radialB" cx="68%" cy="64%" r="55%">
+      <stop offset="0" stop-color="#3a174b" stop-opacity=".36"/>
+      <stop offset=".58" stop-color="#17102b" stop-opacity=".16"/>
+      <stop offset="1" stop-color="#020612" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse">
+      <path d="M34 0H0V34" fill="none" stroke="#174867" stroke-opacity=".22" stroke-width="1"/>
+    </pattern>
+    <filter id="glowC" x="-55%" y="-55%" width="210%" height="210%">
+      <feGaussianBlur stdDeviation="4.5" result="b"/>
+      <feColorMatrix in="b" values="0 0 0 0 0.02 0 0 0 0 0.95 0 0 0 0 1 0 0 0 .85 0"/>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glowB" x="-55%" y="-55%" width="210%" height="210%">
+      <feGaussianBlur stdDeviation="4.5" result="b"/>
+      <feColorMatrix in="b" values="0 0 0 0 0.12 0 0 0 0 0.52 0 0 0 0 1 0 0 0 .9 0"/>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glowA" x="-55%" y="-55%" width="210%" height="210%">
+      <feGaussianBlur stdDeviation="4.5" result="b"/>
+      <feColorMatrix in="b" values="0 0 0 0 1 0 0 0 0 .67 0 0 0 0 .05 0 0 0 .85 0"/>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glowG" x="-55%" y="-55%" width="210%" height="210%">
+      <feGaussianBlur stdDeviation="4.5" result="b"/>
+      <feColorMatrix in="b" values="0 0 0 0 .35 0 0 0 0 1 0 0 0 0 .22 0 0 0 .85 0"/>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glowP" x="-55%" y="-55%" width="210%" height="210%">
+      <feGaussianBlur stdDeviation="4.5" result="b"/>
+      <feColorMatrix in="b" values="0 0 0 0 1 0 0 0 0 .17 0 0 0 0 .78 0 0 0 .85 0"/>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <marker id="arrowC" markerWidth="10" markerHeight="10" refX="8.5" refY="5" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#34f3ff"/>
+    </marker>
+    <marker id="arrowB" markerWidth="10" markerHeight="10" refX="8.5" refY="5" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#48a7ff"/>
+    </marker>
+    <marker id="arrowA" markerWidth="10" markerHeight="10" refX="8.5" refY="5" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#ffb128"/>
+    </marker>
+    <marker id="arrowG" markerWidth="10" markerHeight="10" refX="8.5" refY="5" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#7cff52"/>
+    </marker>
+    <marker id="arrowP" markerWidth="10" markerHeight="10" refX="8.5" refY="5" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#ff5bd7"/>
+    </marker>
+    <style>
+      .title{font:800 42px ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#f7f9ff}
+      .sub{font:700 15px ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#6bf7ff;letter-spacing:.3px}
+      .sec{font:800 18px ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+      .boxh{font:800 15px ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+      .txt{font:500 12px ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#e8f6ff}
+      .tiny{font:600 10.5px ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#b8d8e8}
+      .num{font:900 19px ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+      .panel{fill:#081322;stroke-width:1.8}
+      .inner{fill:#0b1727;stroke-width:1.25}
+      .pill{fill:#0e1b2b;stroke-width:1.2}
+      .lineC{stroke:#34f3ff;stroke-width:3;fill:none;marker-end:url(#arrowC);filter:url(#glowC)}
+      .lineB{stroke:#48a7ff;stroke-width:3;fill:none;marker-end:url(#arrowB);filter:url(#glowB)}
+      .lineA{stroke:#ffb128;stroke-width:3;fill:none;marker-end:url(#arrowA);filter:url(#glowA)}
+      .lineG{stroke:#7cff52;stroke-width:3;fill:none;marker-end:url(#arrowG);filter:url(#glowG)}
+      .lineP{stroke:#ff5bd7;stroke-width:3;fill:none;marker-end:url(#arrowP);filter:url(#glowP)}
+      .dashC{stroke:#34f3ff;stroke-width:2;stroke-dasharray:7 7;fill:none;marker-end:url(#arrowC)}
+      .dashP{stroke:#ff5bd7;stroke-width:2;stroke-dasharray:7 7;fill:none;marker-end:url(#arrowP)}
+    </style>
+  </defs>
+
+  <rect width="1536" height="840" fill="url(#bg)"/>
+  <rect width="1536" height="840" fill="url(#grid)"/>
+  <rect width="1536" height="840" fill="url(#radialA)"/>
+  <rect width="1536" height="840" fill="url(#radialB)"/>
+
+  <text x="394" y="48" class="title">Stack of Life - Hardware to Cloud</text>
+  <text x="387" y="74" class="sub">Electronics -&gt; Networking -&gt; Linux / Kubernetes -&gt; Platform + Go -&gt; Cloud -&gt; Better Questions</text>
+
+  <g transform="translate(12 12)">
+    <rect width="242" height="318" rx="10" class="panel" stroke="#2bf3ff" filter="url(#glowC)"/>
+    <text x="58" y="25" class="sec" fill="#2bf3ff">1  BOOT - foundation</text>
+    <text x="70" y="56" class="txt">1. Electronics graduate</text>
+    <text x="70" y="78" class="txt">2. Hardware discipline</text>
+    <text x="70" y="100" class="txt">3. Signals + boundaries</text>
+    <text x="70" y="122" class="txt">4. Measure before guessing</text>
+    <text x="70" y="144" class="txt">5. First-principles debugging</text>
+    <path d="M25 61h30M40 43v64M26 83h28M18 71h15M48 71h15" stroke="#2bf3ff" stroke-width="3" fill="none"/>
+    <rect x="24" y="170" width="194" height="86" rx="8" class="inner" stroke="#2bf3ff"/>
+    <text x="40" y="202" class="txt">Core instinct</text>
+    <text x="40" y="224" class="tiny">Find the real boundary.</text>
+    <text x="40" y="244" class="tiny">Do not debug folklore.</text>
+    <rect x="68" y="274" width="112" height="28" rx="5" class="pill" stroke="#2bf3ff"/>
+    <text x="89" y="293" class="tiny" fill="#eaffff">Next layer</text>
+  </g>
+
+  <path class="lineC" d="M254 154h48"/>
+
+  <g transform="translate(308 86)">
+    <rect width="842" height="182" rx="12" class="panel" stroke="#8a6cff" filter="url(#glowB)"/>
+    <text x="84" y="31" class="sec" fill="#9d88ff">2  CAREER LOOP - layer-by-layer growth</text>
+    <rect x="22" y="58" width="88" height="32" rx="6" class="pill" stroke="#b9d8ff"/>
+    <text x="40" y="79" class="tiny">Next layer</text>
+    <path class="lineC" d="M112 74h28"/>
+    <rect x="144" y="52" width="142" height="44" rx="6" class="pill" stroke="#b9d8ff"/>
+    <text x="165" y="70" class="tiny">delta = experience</text>
+    <text x="166" y="86" class="tiny">cap ego jumps</text>
+    <path class="lineC" d="M288 74h34"/>
+    <rect x="326" y="52" width="180" height="44" rx="6" class="pill" stroke="#b9d8ff"/>
+    <text x="351" y="78" class="tiny">Update mental model</text>
+    <path class="lineC" d="M508 74h38"/>
+    <path d="M570 48h104l25 26-25 26H570l-25-26z" fill="#071322" stroke="#f3f6ff" stroke-width="1.4"/>
+    <text x="590" y="78" class="tiny">Which layer?</text>
+    <path class="lineB" d="M622 101v28"/>
+    <rect x="510" y="132" width="124" height="34" rx="6" class="pill" stroke="#48a7ff"/>
+    <text x="539" y="154" class="tiny" fill="#cbe8ff">Runtime path</text>
+    <path class="lineA" d="M700 74h42v56"/>
+    <rect x="716" y="132" width="102" height="34" rx="6" class="pill" stroke="#ffb128"/>
+    <text x="744" y="154" class="tiny" fill="#ffe6b0">Ops path</text>
+    <g transform="translate(80 118)">
+      <rect width="112" height="44" rx="6" class="inner" stroke="#48a7ff"/>
+      <text x="20" y="20" class="tiny">Evidence</text>
+      <text x="20" y="36" class="tiny">not folklore</text>
+    </g>
+    <g transform="translate(210 118)">
+      <rect width="112" height="44" rx="6" class="inner" stroke="#ffb128"/>
+      <text x="20" y="20" class="tiny">Operations</text>
+      <text x="20" y="36" class="tiny">safe changes</text>
+    </g>
+    <g transform="translate(342 118)">
+      <rect width="112" height="44" rx="6" class="inner" stroke="#26e2dc"/>
+      <text x="20" y="20" class="tiny">Platform</text>
+      <text x="20" y="36" class="tiny">stable APIs</text>
+    </g>
+  </g>
+
+  <g transform="translate(1202 14)">
+    <rect width="320" height="202" rx="10" class="panel" stroke="#7fa8e9"/>
+    <text x="66" y="22" class="boxh" fill="#f3f7ff">LAYER QUICK VIEW</text>
+    <line x1="0" y1="38" x2="320" y2="38" stroke="#7fa8e9"/>
+    <text x="36" y="56" class="tiny">PHASE</text><text x="148" y="56" class="tiny">FOCUS</text><text x="238" y="56" class="tiny">RESULT</text>
+    <rect x="9" y="68" width="302" height="28" rx="4" class="pill" stroke="#2bf3ff"/><text x="28" y="87" class="tiny">Electronics</text><text x="138" y="87" class="tiny">signals</text><text x="238" y="87" class="tiny">discipline</text>
+    <rect x="9" y="99" width="302" height="28" rx="4" class="pill" stroke="#48a7ff"/><text x="28" y="118" class="tiny">Network</text><text x="138" y="118" class="tiny">paths</text><text x="238" y="118" class="tiny">intuition</text>
+    <rect x="9" y="130" width="302" height="28" rx="4" class="pill" stroke="#ffb128"/><text x="28" y="149" class="tiny">Runtime</text><text x="138" y="149" class="tiny">desired state</text><text x="238" y="149" class="tiny">ops</text>
+    <rect x="9" y="161" width="302" height="28" rx="4" class="pill" stroke="#26e2dc"/><text x="28" y="180" class="tiny">Platform</text><text x="138" y="180" class="tiny">contracts</text><text x="238" y="180" class="tiny">reliability</text>
+  </g>
+
+  <g transform="translate(1202 228)">
+    <rect width="320" height="298" rx="10" class="panel" stroke="#7cff52" filter="url(#glowG)"/>
+    <text x="72" y="24" class="boxh" fill="#bfffb0">CLOUD TARGETS</text>
+    <line x1="0" y1="42" x2="320" y2="42" stroke="#7cff52"/>
+    <g transform="translate(18 58)">
+      <rect width="282" height="42" rx="5" class="inner" stroke="#7cff52"/>
+      <text x="16" y="18" class="tiny">Multi-region systems</text>
+      <text x="16" y="34" class="tiny">design for wider blast radius</text>
+    </g>
+    <g transform="translate(18 112)">
+      <rect width="282" height="42" rx="5" class="inner" stroke="#7cff52"/>
+      <text x="16" y="18" class="tiny">Managed services</text>
+      <text x="16" y="34" class="tiny">use the platform deliberately</text>
+    </g>
+    <g transform="translate(18 166)">
+      <rect width="282" height="42" rx="5" class="inner" stroke="#7cff52"/>
+      <text x="16" y="18" class="tiny">Cost-aware design</text>
+      <text x="16" y="34" class="tiny">architecture has a run cost</text>
+    </g>
+    <g transform="translate(18 220)">
+      <rect width="282" height="42" rx="5" class="inner" stroke="#7cff52"/>
+      <text x="16" y="18" class="tiny">Security boundaries</text>
+      <text x="16" y="34" class="tiny">trust zones shape systems</text>
+    </g>
+  </g>
+
+  <g transform="translate(136 344)">
+    <rect width="464" height="216" rx="10" class="panel" stroke="#48a7ff" filter="url(#glowB)"/>
+    <text x="32" y="30" class="sec" fill="#48a7ff">3A  COMMUNICATION BRANCH</text>
+    <rect x="26" y="58" width="170" height="42" rx="6" class="inner" stroke="#48a7ff"/>
+    <text x="50" y="76" class="tiny">Computer Networking</text>
+    <text x="50" y="92" class="tiny">packets + routes</text>
+    <path class="lineB" d="M198 79h28"/>
+    <rect x="230" y="58" width="204" height="42" rx="6" class="inner" stroke="#48a7ff"/>
+    <text x="254" y="76" class="tiny">Latency, drops, retries</text>
+    <text x="254" y="92" class="tiny">timeouts shape UX</text>
+    <path class="lineB" d="M332 102v30"/>
+    <path d="M284 134h96l24 26-24 26h-96l-24-26z" fill="#071322" stroke="#d6ecff" stroke-width="1.3"/>
+    <text x="299" y="164" class="tiny">Where did it fail?</text>
+    <path class="lineB" d="M260 160h-38"/>
+    <rect x="30" y="140" width="188" height="46" rx="6" class="inner" stroke="#48a7ff"/>
+    <text x="52" y="158" class="tiny">Failure paths</text>
+    <text x="52" y="174" class="tiny">request != just API call</text>
+  </g>
+
+  <g transform="translate(616 298)">
+    <rect width="580" height="238" rx="10" class="panel" stroke="#ffb128" filter="url(#glowA)"/>
+    <text x="42" y="30" class="sec" fill="#ffb128">3B  RUNTIME + PLATFORM BRANCH - production discipline</text>
+    <rect x="16" y="54" width="158" height="44" rx="6" class="inner" stroke="#ffb128"/>
+    <text x="42" y="72" class="tiny">Linux runtime</text>
+    <text x="42" y="88" class="tiny">processes + logs</text>
+    <path class="lineA" d="M176 76h26"/>
+    <rect x="206" y="54" width="158" height="44" rx="6" class="inner" stroke="#ffb128"/>
+    <text x="230" y="72" class="tiny">Containers</text>
+    <text x="230" y="88" class="tiny">isolation + limits</text>
+    <path class="lineA" d="M366 76h26"/>
+    <rect x="396" y="54" width="164" height="44" rx="6" class="inner" stroke="#ffb128"/>
+    <text x="420" y="72" class="tiny">Kubernetes</text>
+    <text x="420" y="88" class="tiny">desired state</text>
+    <rect x="16" y="124" width="118" height="70" rx="6" class="inner" stroke="#26e2dc"/>
+    <text x="34" y="146" class="tiny">APIs</text>
+    <text x="34" y="164" class="tiny">automation</text>
+    <text x="34" y="182" class="tiny">tooling</text>
+    <rect x="150" y="124" width="118" height="70" rx="6" class="inner" stroke="#26e2dc"/>
+    <text x="168" y="146" class="tiny">Control</text>
+    <text x="168" y="164" class="tiny">planes</text>
+    <text x="168" y="182" class="tiny">policy</text>
+    <rect x="284" y="124" width="118" height="70" rx="6" class="inner" stroke="#26e2dc"/>
+    <text x="316" y="146" class="tiny">Go</text>
+    <text x="316" y="164" class="tiny">services</text>
+    <text x="316" y="182" class="tiny">workers</text>
+    <rect x="418" y="124" width="142" height="70" rx="6" class="inner" stroke="#26e2dc"/>
+    <text x="436" y="146" class="tiny">Stable contracts</text>
+    <text x="436" y="164" class="tiny">clear behavior</text>
+    <text x="436" y="182" class="tiny">maintainability</text>
+    <path class="lineA" d="M478 99v22"/>
+  </g>
+
+  <g transform="translate(12 578)">
+    <rect width="190" height="226" rx="10" class="panel" stroke="#ff5bd7" filter="url(#glowP)"/>
+    <text x="24" y="26" class="sec" fill="#ff8be1">4  CALLBACKS</text>
+    <text x="52" y="46" class="tiny">Lessons reused</text>
+    <rect x="18" y="72" width="154" height="24" rx="4" class="pill" stroke="#ff5bd7"/><text x="40" y="88" class="tiny">first principles</text>
+    <rect x="18" y="105" width="154" height="24" rx="4" class="pill" stroke="#ff5bd7"/><text x="40" y="121" class="tiny">failure intuition</text>
+    <rect x="18" y="138" width="154" height="24" rx="4" class="pill" stroke="#ff5bd7"/><text x="40" y="154" class="tiny">ops discipline</text>
+    <rect x="18" y="171" width="154" height="24" rx="4" class="pill" stroke="#ff5bd7"/><text x="40" y="187" class="tiny">reliable design</text>
+  </g>
+
+  <path class="dashP" d="M202 690h16"/>
+  <path class="dashP" d="M1090 536v42"/>
+
+  <g transform="translate(236 578)">
+    <rect width="286" height="204" rx="10" class="panel" stroke="#7cff52" filter="url(#glowG)"/>
+    <text x="34" y="31" class="sec" fill="#7cff52">5  CLOUD ARCHITECTURE</text>
+    <rect x="26" y="58" width="110" height="44" rx="6" class="inner" stroke="#7cff52"/>
+    <text x="46" y="76" class="tiny">Multi-region</text>
+    <text x="46" y="92" class="tiny">systems</text>
+    <rect x="150" y="58" width="110" height="44" rx="6" class="inner" stroke="#7cff52"/>
+    <text x="170" y="76" class="tiny">Managed</text>
+    <text x="170" y="92" class="tiny">services</text>
+    <rect x="26" y="122" width="110" height="44" rx="6" class="inner" stroke="#7cff52"/>
+    <text x="46" y="140" class="tiny">Cost-aware</text>
+    <text x="46" y="156" class="tiny">design</text>
+    <rect x="150" y="122" width="110" height="44" rx="6" class="inner" stroke="#7cff52"/>
+    <text x="170" y="140" class="tiny">Security</text>
+    <text x="170" y="156" class="tiny">boundaries</text>
+  </g>
+
+  <g transform="translate(560 578)">
+    <rect width="330" height="204" rx="10" class="panel" stroke="#bb80ff" filter="url(#glowB)"/>
+    <text x="31" y="31" class="sec" fill="#d8b8ff">6  WRITING ROADMAP</text>
+    <rect x="24" y="56" width="120" height="42" rx="6" class="inner" stroke="#bb80ff"/>
+    <text x="44" y="75" class="tiny">Linux +</text><text x="44" y="91" class="tiny">Kubernetes notes</text>
+    <rect x="172" y="56" width="132" height="42" rx="6" class="inner" stroke="#bb80ff"/>
+    <text x="192" y="75" class="tiny">Go patterns</text><text x="192" y="91" class="tiny">platform services</text>
+    <rect x="24" y="120" width="120" height="42" rx="6" class="inner" stroke="#bb80ff"/>
+    <text x="44" y="139" class="tiny">Reliability</text><text x="44" y="155" class="tiny">lessons</text>
+    <rect x="172" y="120" width="132" height="42" rx="6" class="inner" stroke="#bb80ff"/>
+    <text x="192" y="139" class="tiny">Cloud-native</text><text x="192" y="155" class="tiny">architecture</text>
+  </g>
+
+  <g transform="translate(922 578)">
+    <rect width="320" height="186" rx="10" class="panel" stroke="#ff565e" filter="url(#glowP)"/>
+    <text x="40" y="29" class="sec" fill="#ff747a">7  PRODUCTION REALITY</text>
+    <rect x="26" y="58" width="268" height="38" rx="6" class="inner" stroke="#ff565e"/>
+    <text x="48" y="82" class="tiny">Works locally is not enough</text>
+    <rect x="26" y="108" width="268" height="38" rx="6" class="inner" stroke="#ff565e"/>
+    <text x="48" y="132" class="tiny">Deployable + observable + safe</text>
+  </g>
+
+  <path class="lineG" d="M522 680h34"/>
+  <path class="lineP" d="M890 680h28"/>
+</svg>
