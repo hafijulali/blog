@@ -1,32 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>Noted</title>
-    <link>//127.0.0.1:1313/</link>
-    <description>Recent content on Noted</description>
-    <generator>Hugo -- 0.147.9</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 29 Jun 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//127.0.0.1:1313/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>About</title>
-      <link>//127.0.0.1:1313/about/about/</link>
-      <pubDate>Sun, 29 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>//127.0.0.1:1313/about/about/</guid>
-      <description>&lt;p&gt;Please visit &lt;a href=&#34;https://hafijul.dev&#34;&gt;https://hafijul.dev&lt;/a&gt; to know more about me.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Hello World</title>
-      <link>//127.0.0.1:1313/2025/06/29/hello-world/</link>
-      <pubDate>Sun, 29 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>//127.0.0.1:1313/2025/06/29/hello-world/</guid>
-      <description>&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
-&lt;p&gt;Even though there isn&amp;rsquo;t much content for my first blog post, I thoroughly enjoyed the overall experience setting this up.&lt;/p&gt;
-&lt;h2 id=&#34;tech-stack&#34;&gt;Tech stack&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Noted</title><link>https://blog.hafijul.dev/</link><description>Recent content on Noted</description><generator>Hugo -- 0.163.2</generator><language>en-us</language><lastBuildDate>Sat, 20 Jun 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.hafijul.dev/index.xml" rel="self" type="application/rss+xml"/><item><title>Agenty World: AI Multi-agent RPG style game</title><link>https://blog.hafijul.dev/2026/06/20/agenty-world-ai-multi-agent-rpg-style-game/</link><pubDate>Sat, 20 Jun 2026 00:00:00 +0000</pubDate><guid>https://blog.hafijul.dev/2026/06/20/agenty-world-ai-multi-agent-rpg-style-game/</guid><description>A technical walkthrough of Agenty World, a Three.js and TypeScript RPG-style simulation where AI agents talk, form bonds, reshape the world, and evolve over time.</description></item><item><title>Stack of Life: Hardware to Cloud</title><link>https://blog.hafijul.dev/2026/04/19/stack-of-life-hardware-to-cloud/</link><pubDate>Sun, 19 Apr 2026 00:00:00 +0000</pubDate><guid>https://blog.hafijul.dev/2026/04/19/stack-of-life-hardware-to-cloud/</guid><description>A personal technical journey from electronics and networking to Linux, Kubernetes, platform engineering, Go, and cloud architecture.</description></item><item><title>Cloudflare Tunnel SSH</title><link>https://blog.hafijul.dev/2025/08/16/cloudflare-tunnel-ssh/</link><pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate><guid>https://blog.hafijul.dev/2025/08/16/cloudflare-tunnel-ssh/</guid><description>&lt;h1 id="accessing-private-network-ssh-using-cloudflare-tunnels"&gt;Accessing private network ssh using Cloudflare Tunnels&lt;/h1&gt;
+&lt;p&gt;This guide will walk you through the steps to configure a Cloudflare Tunnel to access your device using a public hostname via SSH.&lt;/p&gt;
+&lt;h2 id="prerequisites"&gt;Prerequisites&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://pages.github.com&#34;&gt;Github Pages&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
-    </item>
-  </channel>
-</rss>
+&lt;li&gt;A Cloudflare account&lt;/li&gt;
+&lt;li&gt;A domain name managed by Cloudflare&lt;/li&gt;
+&lt;li&gt;Cloudflare Tunnel installed on your private network device&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="step-1-configure-the-tunnel"&gt;Step 1: Configure the Tunnel&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Navigate to Cloudflare Zero Trust dashboard&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;From Networks select Tunnels&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;From list of tunnels click on 3dot menu and goto configure&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>About</title><link>https://blog.hafijul.dev/about/about/</link><pubDate>Sun, 29 Jun 2025 00:00:00 +0000</pubDate><guid>https://blog.hafijul.dev/about/about/</guid><description>&lt;p&gt;Please visit &lt;a href="https://hafijul.dev"&gt;https://hafijul.dev&lt;/a&gt; to know more about me.&lt;/p&gt;</description></item><item><title>Hello World</title><link>https://blog.hafijul.dev/2025/06/29/hello-world/</link><pubDate>Sun, 29 Jun 2025 00:00:00 +0000</pubDate><guid>https://blog.hafijul.dev/2025/06/29/hello-world/</guid><description>&lt;h2 id="background"&gt;Background&lt;/h2&gt;
+&lt;p&gt;Even though there isn&amp;rsquo;t much content for my first blog post, I thoroughly enjoyed the overall experience setting this up.&lt;/p&gt;
+&lt;h2 id="tech-stack"&gt;Tech stack&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://gohugo.io"&gt;Hugo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://pages.github.com"&gt;Github Pages&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>

@@ -5,6 +5,7 @@ theme = 'PaperMod'
 version = '0.0.2'
 
 [params]
+  author = "Hafijul"
   homeInfoParams = { Title = "Welcome to My Blog", Content = "Tech, Ideas, Minimalism." }
   ShowReadingTime = true
   ShowCodeCopyButtons = true
@@ -28,4 +29,3 @@ version = '0.0.2'
   identifier = "about"
   name = "About"
   url = "/about/"
-
